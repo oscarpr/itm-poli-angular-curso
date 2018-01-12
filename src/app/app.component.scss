@@ -1,0 +1,48 @@
+@import '../scss/application';
+@import '../scss/variables';
+
+$header-background-color: $medium-light-green;
+
+.app-header{
+    border-radius: 3px;
+    height: 4em;
+    background-color: $header-background-color;
+    margin-left: 0;
+
+    .logo-container img{
+        width: 4em;
+        height: 1em;
+    }
+
+    .title-container{
+        text-align: center;
+    }
+
+    .nav-container{
+        padding-left: 0;
+        padding-right: 0;
+
+        ul{
+            list-style-type: none;
+
+            a{
+                text-decoration: none;
+                cursor: pointer;
+                color: $white;
+
+                &:hover {
+                    color: $black;
+                }
+            }
+        }
+    }
+
+
+    h1{
+        margin: 0;
+    }
+
+    ul{
+        background-color: $header-background-color;
+    }
+}

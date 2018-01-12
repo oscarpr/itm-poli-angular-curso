@@ -1,0 +1,77 @@
+@import '../../../scss/variables';
+
+$item-background: $light-green;
+$item-background-hover:  $darker-green;
+$item-font-color-hover: $white;
+
+
+.artist-info-detail-container{
+    border-radius: 3px;
+}
+
+
+.artists-list-container{
+    // position: absolute;
+    // display: inline-block;
+    // width: 40%;
+    height: 100vh;
+    overflow-y: scroll;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    .artist-list{
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .artist{
+        border-radius: 3px;
+        padding: 0.5em;
+        border-bottom: 1px solid grey;
+        background-color: $item-background;
+        cursor: pointer;
+
+        &:hover{
+            background-color: $item-background-hover;
+            color: $item-font-color-hover;
+        }
+
+        .artist-image {
+            width: 3em;
+            height: 3em;
+            margin-right: 1em;
+            border-radius: 50%;
+            box-shadow: 4px 2px;
+        }
+    
+        .artist-image, .artist-info{
+            vertical-align: middle;
+        }
+    
+        .artist-info{
+            display: inline-block;
+            margin: 0;
+    
+            .artist-name, .fans{
+                display: block;
+            }
+        }
+    }
+
+
+}
+
+
+.artist-info-detail-container{
+    height: 100vh;
+    overflow-y: scroll;
+    background-color: lightgray;
+}
+
+.selected-artist{
+    background-color:white !important;
+
+    &:hover {
+        color: $black !important;
+    }
+}

@@ -1,0 +1,23 @@
+<div class="row">
+	<section class="artists-list-container col-md-4">
+		<div class="artist-list">
+			<div *ngFor="let artist of artists" class="artist" (click)="selectArtist(artist)" [ngClass]="{'selected-artist':artist.mbid == selectedArtist}">
+				<img [src]="artist.image[2]['#text']" [attr.alt]="artist.name" class="artist-image">
+				<p class="artist-info">
+					<span class="artist-name">
+						{{artist.name}}
+					</span>
+
+					<!-- <span class="fans">
+						Total reproducciones: {{artist.listeners | number}}
+					</span> -->
+				</p>
+			</div>
+		</div>
+
+	</section>
+
+	<section class="artist-info-detail-container col-md-8">
+		<app-artist-albums [artistId]="selectedArtist"></app-artist-albums>
+	</section>
+</div>

@@ -1,0 +1,28 @@
+.no-selected-image{
+   height: 100%;
+
+   img{
+       margin-top: 30vh;
+       width: 100%;
+       height: 10em;
+   }
+}
+
+.top-albums-container{
+    text-align: center;
+    padding: 0 3em;
+
+    .title-container{
+        margin-bottom: 2em;
+    }
+
+    
+    article{
+        margin-top: 1em;
+        border-bottom: 1px dashed gray;
+
+        img{
+            border-radius: 30%;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+<section class="no-selected-image col-centered" *ngIf="!albums; else contentBlock">
+	<img src="/assets/accenture-logo.png" alt="Seleccione un artistas">
+</section>
+
+
+<ng-template #contentBlock>
+	<section class="top-albums-container">
+		<div class="row">
+			<div class="col-xs-12 title-container">
+				<h1>{{artistname}}</h1>
+			</div>
+
+
+			<article *ngFor="let album of albums" class="col-xs-12 album">
+				<img [src]="album.image[2]['#text']" [alt]="album.name">
+
+				<h4>{{album.name}}</h4>
+				<p>Número de reproducciones: {{album.playcount | number}}</p>
+			</article>
+		</div>
+	</section>
+</ng-template>
